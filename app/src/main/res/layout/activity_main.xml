@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".MainActivity">
+
+   <TextView
+       android:id="@+id/txtCelcius"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Celcius"
+       android:textSize="16sp"
+       android:layout_marginTop="14dp"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintRight_toLeftOf="@id/editCelcius"
+       app:layout_constraintLeft_toLeftOf="parent"/>
+    <EditText
+        android:id="@+id/editCelcius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan angka celcius"
+        app:layout_constraintLeft_toRightOf="@id/txtCelcius"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btnKonversi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="konversi"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:background="#F51C47"
+        app:layout_constraintTop_toBottomOf="@id/editCelcius"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtKelvin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelvin"
+        android:textSize="16sp"
+
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@id/btnKonversi"
+        app:layout_constraintRight_toLeftOf="@id/editKelvin"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <EditText
+        android:id="@+id/editKelvin"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnKonversi"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/txtKelvin"/>
+
+    <TextView
+        android:id="@+id/txtFahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fahrenheit"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/txtKelvin"
+        app:layout_constraintRight_toLeftOf="@id/editFahrenheit"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <EditText
+        android:id="@+id/editFahrenheit"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editKelvin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/txtFahrenheit"/>
+
+    <TextView
+        android:id="@+id/txtReamur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reamur"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/txtFahrenheit"
+        app:layout_constraintRight_toLeftOf="@id/editReamur"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <EditText
+        android:id="@+id/editReamur"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editFahrenheit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/txtReamur"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
